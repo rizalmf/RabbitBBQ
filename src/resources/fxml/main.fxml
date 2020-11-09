@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="parent" prefHeight="450.0" prefWidth="280.0" styleClass="mainFxmlClass" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rabbitbbq.controller.MainController">
+   <children>
+      <VBox id="mainWindow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="h1Box" fx:id="headerBox" prefWidth="550.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label id="lInfo" fx:id="lInfo" text="Not connected" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="bGithub" contentDisplay="GRAPHIC_ONLY" prefHeight="28.0" prefWidth="28.0" ripplerFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GITHUB" size="13" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox fx:id="bodyBox" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox id="h2Box" alignment="CENTER_LEFT">
+                           <children>
+                              <JFXButton id="bClear" fx:id="bClear" contentDisplay="TEXT_ONLY" prefHeight="28.0" ripplerFill="WHITE" text="Clear all" />
+                              <JFXButton id="bConfig" fx:id="bConfig" contentDisplay="TEXT_ONLY" layoutX="10.0" layoutY="10.0" prefHeight="28.0" ripplerFill="WHITE" text="Settings" />
+                           </children>
+                        </HBox>
+                        <HBox VBox.vgrow="ALWAYS">
+                           <children>
+                              <ScrollPane id="scroll" fx:id="spMessage" hbarPolicy="NEVER" HBox.hgrow="ALWAYS">
+                                 <content>
+                                    <VBox id="vbMessage" fx:id="vbMessage" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

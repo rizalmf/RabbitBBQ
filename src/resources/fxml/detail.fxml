@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="parent" prefHeight="520.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@../css/main.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.rabbitbbq.controller.MessageDetailController">
+   <children>
+      <VBox id="mainWindow" layoutX="144.0" layoutY="59.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="h2Box" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" minHeight="37.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton id="bBeautify" fx:id="bBeautify" ripplerFill="WHITE" text="Beautify" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <JFXTextArea id="jsonArea" fx:id="taBody" editable="false" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

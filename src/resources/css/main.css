@@ -1,0 +1,189 @@
+/* 
+    Created on : Nov 8, 2020, 7:25:38 AM
+    Author     : rizal
+*/
+
+.mainFxmlClass {
+    /*parent here ..*/
+}
+
+.label, .button .text{
+    -fx-font-family:'Monospace';
+}
+
+#mainWindow{
+    -fx-background-color: #333333;
+    /*-fx-background-radius: 2px;*/
+}
+
+#h1Box{
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 0px 0px 0px 5px;
+    -fx-background-color: #0000006c;
+}
+#h2Box{
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #3c3c3c;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: #0000004c;
+}
+
+#bClear{
+    -fx-text-fill: white;
+    -fx-font-size:10px;
+}
+#bClear .jfx-rippler{
+    -jfx-rippler-fill: #f47023c6;
+}
+#bClear:hover{
+    -fx-text-fill: #f47023;
+}
+#bConfig{
+    -fx-text-fill: white;
+    -fx-font-size:10px;
+}
+#bConfig .jfx-rippler{
+    -jfx-rippler-fill: #f47023c6;
+}
+#bConfig:hover{
+    -fx-text-fill: #f47023;
+}
+#bBeautify{
+    -fx-text-fill: white;
+    -fx-background-color: #63b175;
+    -fx-font-size:10px;
+}
+#lInfo{
+    -fx-text-fill: white;
+}
+#vbMessage{
+    -fx-padding: 0px;
+    -fx-spacing: 2;
+}
+#vbMessageChild{
+    -fx-background-color: #00000015;
+    -fx-padding: 3px 0px 3px 0px;
+    -fx-spacing: 2;
+}
+#vbMessageChild:pressed{
+    -fx-background-color: #00000049;
+}
+#hbMessageTime{
+    -fx-alignment: TOP_RIGHT;
+    -fx-padding: 0px 4px 0px 0px;
+}
+#lTime{
+    -fx-text-fill: #f47023;
+    -fx-font-size:9px;
+}
+#hbMessageData{
+    -fx-alignment: TOP_LEFT;
+    -fx-padding: 0px 4px 0px 4px;
+}
+#lData{
+    -fx-text-fill: white;
+    -fx-font-size:11px;
+    -fx-wrap-text: true;
+    -fx-max-height:60px;
+}
+#jsonArea{
+    -fx-text-fill: #63b175d7;
+    -fx-padding: 4px;
+}
+/*
+    Scroll Bar
+*/
+#scroll{
+    -fx-padding: 3px 0px 0px 0px;
+    -fx-fit-to-width:true;
+    /*-fx-fit-to-height:true;*/
+}
+#scroll, #scroll .viewport{
+    -fx-background-color:transparent;
+}
+#scroll .scroll-bar,
+#jsonArea .scroll-bar{
+    /*rgb(96,96,96);*/
+ -fx-background-color: transparent;
+ -fx-background-radius: 2em;
+}
+#scroll .scroll-bar:vertical,
+#jsonArea .scroll-bar:vertical{
+    -fx-pref-width: 15px;
+}
+#scroll .scroll-bar:horizontal .track,
+#scroll .scroll-bar:vertical .track,
+#jsonArea .scroll-bar:vertical .track{
+ -fx-background-color: transparent;
+ -fx-border-color:transparent;
+ -fx-background-radius: 2em;
+}
+#scroll .scroll-bar:vertical .track-background,
+#scroll .scroll-bar:horizontal .track-background,
+#jsonArea .scroll-bar:horizontal .track-background {
+ -fx-background-color: transparent;
+ -fx-background-insets: 0;
+ -fx-background-radius: 2em;
+}
+#scroll .scroll-bar:vertical .thumb,
+#jsonArea .scroll-bar:vertical .thumb{
+    /*-fx-background-color: #48172c61;*/
+    -fx-background-color: #9494948f;
+    -fx-background-insets: 0 4 0 4;
+    -fx-background-radius: 1em;
+}
+#scroll .scroll-bar:horizontal .thumb {
+    /*-fx-background-color: #48172c61;*/
+    -fx-background-color: #9494948f;
+    -fx-background-insets: 4 0 4 0;
+    -fx-background-radius: 1em;
+}
+#scroll .scroll-bar:horizontal .thumb:hover,
+#scroll .scroll-bar:vertical .thumb:hover,
+#jsonArea .scroll-bar:vertical .thumb:hover{
+ /*-fx-background-color: #48172c8f;*/
+ -fx-background-color: #949494bd;
+}
+#scroll .scroll-bar:horizontal .thumb:pressed,
+#scroll .scroll-bar:vertical .thumb:pressed,
+#jsonArea .scroll-bar:vertical .thumb:pressed{
+ /*-fx-background-color: #a7ca38; hijau*/
+ /*-fx-background-color: #017ccc; biru*/
+ -fx-background-color: #949494;
+}
+#scroll .scroll-bar:vertical .increment-button, 
+.scroll-bar:vertical .decrement-button,
+#jsonArea .scroll-bar:vertical .increment-button, 
+#jsonArea .scroll-bar:vertical .decrement-button {
+/* -fx-background-color:transparent;
+ -fx-background-radius: 2em;
+ -fx-padding: 5;*/
+ -fx-background-color :transparent;
+ -fx-background-radius : 0.0em;
+ -fx-padding :0.0 10.0 0.0 0.0;
+}
+#scroll .scroll-bar:vertical .increment-arrow,
+#scroll .scroll-bar:vertical .decrement-arrow,
+#jsonArea .scroll-bar:vertical .increment-arrow,
+#jsonArea .scroll-bar:vertical .decrement-arrow {
+/* -fx-background-color: rgb(211,211,211);
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+ -fx-rotate: 0;*/
+    -fx-shape : " ";    
+    -fx-padding :0.0 0.15em;
+}
+#scroll .scroll-bar:horizontal .increment-arrow,
+#scroll .scroll-bar:horizontal .decrement-arrow {
+/* -fx-background-color: rgb(211,211,211);
+ -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+ -fx-padding: 0.25em;
+ -fx-rotate: -180;*/
+    -fx-shape : " ";    
+    -fx-padding :0.0 0.15em 0.7em 0;
+}
+#scroll .scroll-bar:vertical:focused,
+#scroll .scroll-bar:horizontal:focused,
+#jsonArea .scroll-bar:vertical:focused{
+ -fx-background-color: transparent,rgb(96,96,96),rgb(96,96,96);
+}

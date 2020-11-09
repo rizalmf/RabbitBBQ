@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/controller/additional/MainBuilder.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/model/Message.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/controller/MainController.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/util/Session.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/controller/ConfigController.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/util/Beautify.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/model/Queue.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/service/BBQ.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/model/Factory.java</file>
+            <file>file:/home/rizal/NetBeansProjects/AntProjects/RabbitBBQ/src/com/rabbitbbq/RabbitBBQ.java</file>
+        </group>
+    </open-files>
+</project-private>

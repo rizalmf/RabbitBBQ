@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="350.0" prefWidth="750.0" styleClass="mainFxmlClass" stylesheets="@../css/config.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rabbitbbq.controller.ConfigController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox id="headerBox" alignment="CENTER">
+                     <children>
+                        <Label id="lHeader" text="Connection">
+                           <padding>
+                              <Insets top="6.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" spacing="15.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox id="formChild" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="80.0" text="Host" />
+                              <JFXTextField fx:id="tfHost" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox id="formChild" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="80.0" text="Port" />
+                              <JFXTextField fx:id="tfPort" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox id="formChild" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="80.0" text="Username" />
+                              <JFXTextField fx:id="tfUsername" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox id="formChild" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="80.0" text="Password" />
+                              <JFXTextField fx:id="tfPassword" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox id="formChild" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="80.0" text="VHost" />
+                              <JFXTextField fx:id="tfVhost" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox id="formChild" alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <JFXButton fx:id="bSave" ripplerFill="WHITE" style="-fx-background-color: #f47023;" text="Connect &amp; Save" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <ScrollPane id="scroll" fitToHeight="true" fitToWidth="true" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox spacing="15.0">
+                     <children>
+                        <HBox id="headerBox" alignment="CENTER">
+                           <children>
+                              <Label id="lHeader" text="Queue">
+                                 <padding>
+                                    <Insets top="6.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox spacing="15.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="80.0" text="Name" />
+                                    <JFXTextField fx:id="tfName" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="80.0" text="Exchange" />
+                                    <JFXTextField fx:id="tfExchange" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" text="Routing key" />
+                                    <JFXTextField fx:id="tfRoutingKey" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="80.0" text="Durable" />
+                                    <JFXCheckBox fx:id="cbDurable" text="(default false)" />
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" text="Auto Delete" />
+                                    <JFXCheckBox fx:id="cbAutoDelete" selected="true" text="(default true)" />
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="80.0" text="Exclusive" />
+                                    <JFXCheckBox fx:id="cbExclusive" text="(default false)" />
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="3.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="80.0" text="Arguments" />
+                                    <JFXTextField fx:id="tfArguments" prefHeight="23.0" promptText="(encoded json)" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
