@@ -5,7 +5,7 @@
 .mainFxmlClass {
     -fx-background-color: #333333;
 }
-.label, .button .text, .jfx-text-field, .jfx-check-box{
+.label, .button .text, .jfx-text-field, .jfx-check-box, .jfx-text-area{
     -fx-font-family:'Monospace';
     -fx-text-fill:white;
     -fx-fill:white;
@@ -13,7 +13,7 @@
 .label, .jfx-check-box{
     -fx-font-size: 12px;
 }
-.jfx-text-field{
+.jfx-text-field, .jfx-combo-box, .jfx-text-area{
     -jfx-focus-color :#63b175;
     -fx-font-size: 12px;
 }
@@ -27,7 +27,9 @@
 #formChild{
     -fx-padding:4px 8px 4px 12px;
 }
-
+#lInfo{
+    -fx-font-size:10px;
+}
 
 /*
     Scroll Bar

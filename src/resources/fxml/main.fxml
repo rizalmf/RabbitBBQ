@@ -2,8 +2,11 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -51,5 +54,13 @@
             </HBox>
          </children>
       </VBox>
+      <Button id="bPublish" fx:id="bPublish" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <effect>
+            <DropShadow height="8.86" radius="3.9299999999999997" spread="0.06" width="8.86" />
+         </effect>
+         <graphic>
+            <MaterialDesignIconView fill="WHITE" glyphName="SEND" size="19" />
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

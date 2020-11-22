@@ -4,7 +4,8 @@
 ## On Development
 
 ## Download app 
-  - [rabbitbbq-1.0.0 installer.deb](https://github.com/rizalmf/RabbitBBQ/blob/master/out/rabbitbbq-1.0.0%20installer.deb) (Debian/Ubuntu).
+  - [rabbitbbq-1.1.0 installer.deb](https://github.com/rizalmf/RabbitBBQ/blob/master/out/rabbitbbq-1.1.0%20installer.deb) (Debian/Ubuntu).
+  - Older version ..
 
 ## Screenhots
 ![1](1.png)
@@ -14,3 +15,6 @@
 ### Changelog
 - **v1.0.0 (build ready)**
    - initial commit
+- **v1.1.0 (build ready)**
+   - feature/publish_subscribe
+     (add basic publish. temporary disable headers, arguments, properties (bug))

@@ -90,6 +90,22 @@
     -fx-text-fill: #63b175d7;
     -fx-padding: 4px;
 }
+
+#bPublish{
+    -fx-background-color: #63b175d6;
+    -fx-background-radius: 5em;
+    -fx-max-height:42px;
+    -fx-max-width:42px;
+    -fx-min-height:42px;
+    -fx-min-width:42px;
+    -fx-padding: 0px;
+}
+#bPublish:hover{
+    -fx-background-color: #63b175;
+}
+#bPublish:pressed{
+    -fx-background-color: #63b175a6;
+}
 /*
     Scroll Bar
 */

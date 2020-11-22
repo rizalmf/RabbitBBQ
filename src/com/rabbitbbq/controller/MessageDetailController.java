@@ -49,13 +49,13 @@ public class MessageDetailController implements Initializable {
     }    
     
     private void taBodyProperties(){
-        taBody.setText(message.getBody());
+        taBody.setText(message.getPayload());
     }
     
     private void bBeautifyProperties(){
         bBeautify.setOnAction((e) -> {
             try {
-                taBody.setText(new Beautify().format(message.getBody()));
+                taBody.setText(new Beautify().format(message.getPayload()));
             } catch (Exception ex) {
                 exceptions.log(ex);
             }

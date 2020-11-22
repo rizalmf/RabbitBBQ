@@ -8,10 +8,13 @@ package com.rabbitbbq.service;
 import com.rabbitbbq.model.Factory;
 import com.rabbitbbq.model.Queue;
 import com.rabbitbbq.util.Session;
+import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -24,22 +27,15 @@ public class BBQ {
     }
     
     public void listen(DeliverCallback deliverCallback) throws Exception{
-        Session session = new Session();
-        Factory factoryData = session.getFactory();
-        Queue queueData = session.getQueue();
-        
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost(factoryData.getHost());
-        factory.setPort(factoryData.getPort());
-        factory.setUsername(factoryData.getUsername());
-        factory.setPassword(factoryData.getPassword());
-        factory.setVirtualHost(factoryData.getVirtualHost());
         if (connection != null) {
             connection.close();
             connection = null;
         }
-        connection = factory.newConnection();
+        
+        connection = getFactory().newConnection();
         Channel channel = connection.createChannel();
+        
+        Queue queueData = new Session().getQueue();
         String queue = queueData.getName();
         String exchange = queueData.getExchange();
         String routingKey = queueData.getRoutingKey();
@@ -56,4 +52,42 @@ public class BBQ {
         }
         channel.basicConsume(queue, true, deliverCallback, consumerTag -> { });
     }
+    
+    public void publish(Queue queueData, String message) throws Exception{        
+        try (Connection connectionTemp = getFactory().newConnection()) {
+            Channel channel = connectionTemp.createChannel();
+            String queue = queueData.getName();
+            String exchange = queueData.getExchange();
+            String routingKey = queueData.getRoutingKey();
+            boolean durable = queueData.isDurable();
+            boolean exclusive = queueData.isExclusive();
+            boolean autoDelete = queueData.isAutoDelete();
+            channel.queueDeclare(queue, durable, exclusive, autoDelete, null);
+            
+//            temp disable headers & properties
+//            AMQP.BasicProperties.Builder builder = new AMQP.BasicProperties().builder();
+//            Map<String,Object> headerMap = new HashMap<>();
+//            headerMap.put(key,value)
+//            headerMap.put(key1,value1)
+//            headerMap.put(key2,value2)
+//            builder.headers(headerMap);
+
+            channel.basicPublish(exchange, routingKey, null, message.getBytes());
+        }
+    }
+    
+    private ConnectionFactory getFactory(){
+        Session session = new Session();
+        Factory factoryData = session.getFactory();
+        
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost(factoryData.getHost());
+        factory.setPort(factoryData.getPort());
+        factory.setUsername(factoryData.getUsername());
+        factory.setPassword(factoryData.getPassword());
+        factory.setVirtualHost(factoryData.getVirtualHost());
+        
+        return factory;
+    }
+
 }

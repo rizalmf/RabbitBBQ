@@ -5,22 +5,32 @@
  */
 package com.rabbitbbq.model;
 
+import java.util.Map;
+
 /**
  *
  * @author rizal
  */
 public class Message {
     private String date;
-    private String body;
+    private String payload;
+    private Map<String,Object> headers;
+    private Map<String,Object> properties;
 
     public Message() {
     }
 
-    public Message(String date, String body) {
+    public Message(String date, String payload) {
         this.date = date;
-        this.body = body;
+        this.payload = payload;
     }
 
+    public Message(String payload, Map<String, Object> headers, Map<String, Object> properties) {
+        this.payload = payload;
+        this.headers = headers;
+        this.properties = properties;
+    }
+    
     public String getDate() {
         return date;
     }
@@ -29,12 +39,28 @@ public class Message {
         this.date = date;
     }
 
-    public String getBody() {
-        return body;
+    public String getPayload() {
+        return payload;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setPayload(String payload) {
+        this.payload = payload;
+    }
+
+    public Map<String, Object> getHeaders() {
+        return headers;
+    }
+
+    public void setHeaders(Map<String, Object> headers) {
+        this.headers = headers;
+    }
+
+    public Map<String, Object> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Map<String, Object> properties) {
+        this.properties = properties;
     }
     
 }
