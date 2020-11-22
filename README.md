@@ -1,5 +1,5 @@
 # RabbitBBQ
-  Simple RabbitMQ reciever build in Java
+  Simple RabbitMQ reciever/publisher build in Java
 
 ## On Development
 
