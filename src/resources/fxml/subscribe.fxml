@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="438.0" prefWidth="392.0" styleClass="mainFxmlClass" stylesheets="@../css/config.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.rabbitbbq.controller.SubscribeController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane id="scroll" fitToHeight="true" fitToWidth="true" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox spacing="15.0">
+                     <children>
+                        <HBox id="headerBox" alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Label id="lHeader" text="Publish/Subscribe" wrapText="true">
+                                 <padding>
+                                    <Insets top="6.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER_LEFT" spacing="15.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox id="formChild" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="45.0" spacing="7.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Exchange" wrapText="true" />
+                                    <JFXTextField fx:id="tfExchange" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" layoutX="10.0" layoutY="288.0" minHeight="45.0" spacing="7.0">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Routing key" wrapText="true" />
+                                    <JFXTextField fx:id="tfRoutingKey" prefHeight="23.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" minHeight="45.0" spacing="7.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Headers" wrapText="true" />
+                                    <JFXTextField fx:id="tfHeaders" prefHeight="23.0" promptText="(encoded json)" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" minHeight="45.0" spacing="7.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Properties" wrapText="true" />
+                                    <JFXTextField fx:id="tfProperties" prefHeight="23.0" promptText="(encoded json)" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="CENTER_LEFT" spacing="7.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefWidth="80.0" text="Payload" wrapText="true" />
+                                    <JFXTextArea fx:id="taPayload" prefColumnCount="12" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXTextArea>
+                                 </children>
+                              </HBox>
+                              <HBox id="formChild" alignment="BOTTOM_RIGHT" spacing="7.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" />
+                                    <JFXButton fx:id="bPublish" ripplerFill="WHITE" style="-fx-background-color: #f47023;" text="Publish" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

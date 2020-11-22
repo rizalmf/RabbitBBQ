@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tooltip;
@@ -38,6 +39,7 @@ public class MainController implements Initializable {
     private String githubTooltip;
     private String clearTooltip;
     private String configTooltip;
+    private String publishTooltip;
     private MainBuilder builder;
     
     @FXML
@@ -58,6 +60,8 @@ public class MainController implements Initializable {
     private HBox headerBox;
     @FXML
     private HBox bodyBox;
+    @FXML
+    private Button bPublish;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,9 +79,11 @@ public class MainController implements Initializable {
         githubTooltip = "Fork me on github";
         clearTooltip = "Clear history";
         configTooltip = "Set configuration";
+        publishTooltip = "Publish/Subscribe";
         
         headerProperties();
         bodyProperties();
+        floatButtonProperties();
     }
     private void headerProperties(){        
         //set tooltip nodes
@@ -131,6 +137,13 @@ public class MainController implements Initializable {
         Platform.runLater(() -> {
             vbMessage.getChildren().add(0, builder.buildMessage(
                 new Message(sdf.format(new Date()), msg)));
+        });
+    }
+    
+    private void floatButtonProperties(){
+        bPublish.setTooltip(new Tooltip(publishTooltip));
+        bPublish.setOnAction((e) -> {
+            builder.openPublish(bPublish);
         });
     }
 }
