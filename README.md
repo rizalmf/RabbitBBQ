@@ -5,7 +5,7 @@
 
 ## Download app 
   - [rabbitbbq-1.1.0 installer.deb](https://github.com/rizalmf/RabbitBBQ/blob/master/out/rabbitbbq-1.1.0%20installer.deb) (Debian/Ubuntu).
-  - Older version ..
+  - [Older version ..](https://github.com/rizalmf/RabbitBBQ/tree/master/out)
 
 ## Screenhots
 ![1](1.png)
