@@ -2,12 +2,18 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="parent" prefHeight="520.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@../css/main.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.rabbitbbq.controller.MessageDetailController">
+<AnchorPane fx:id="parent" prefHeight="520.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rabbitbbq.controller.MessageDetailController">
    <children>
       <VBox id="mainWindow" layoutX="144.0" layoutY="59.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,7 +29,42 @@
                   </VBox>
                </children>
             </HBox>
-            <JFXTextArea id="jsonArea" fx:id="taBody" editable="false" VBox.vgrow="ALWAYS" />
+            <StackPane alignment="TOP_RIGHT" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextArea id="jsonArea" fx:id="taBody" editable="false" />
+                  <Group>
+                     <children>
+                        <HBox id="findPane" fx:id="hbFindParent" alignment="CENTER_LEFT" layoutX="8.0" layoutY="9.0">
+                           <children>
+                              <HBox fx:id="hbFind" alignment="CENTER_LEFT">
+                                 <children>
+                                    <TextField id="tfFind" fx:id="tfFind" prefWidth="95.0" promptText="Find" />
+                                    <Button id="bUpDown" fx:id="bFindUp" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="ARROW_UP" size="11" />
+                                       </graphic>
+                                    </Button>
+                                    <Button id="bUpDown" fx:id="bFindDown" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="ARROW_DOWN" size="11" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <JFXButton id="bFind" fx:id="bTogleFind" contentDisplay="GRAPHIC_ONLY" ripplerFill="#63b175" text=" ">
+                                 <graphic>
+                                    <FontAwesomeIconView fx:id="viewTogleFind" fill="WHITE" glyphName="SEARCH" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                     </children>
+                  </Group>
+               </children>
+            </StackPane>
          </children>
       </VBox>
    </children>
