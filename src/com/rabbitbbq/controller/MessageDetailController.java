@@ -157,7 +157,6 @@ public class MessageDetailController implements Initializable {
             found.put("start", matcher.start());
             found.put("end", matcher.end());
             matcherList.add(found);
-            taBody.selectRange(matcher.start(), matcher.end());
         }
         
         focusArea(false);
