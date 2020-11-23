@@ -18,6 +18,6 @@
 - **v1.1.0 (build ready)**
    - feature/publish_subscribe
      (add basic publish. temporary disable headers, arguments, properties (bug))
-- v1.2.1
+- **v1.2.1 (build ready)**
    - feature/selected_pattern
      (add search by key, combination listener. fix focus area)
